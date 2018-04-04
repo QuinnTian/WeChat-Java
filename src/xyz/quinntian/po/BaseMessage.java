@@ -6,7 +6,7 @@ public class BaseMessage {
 	private long CreateTime;
 	private String MsgType;
 	public String getToUserName() {
-		return ToUserName;
+		return ToUserName;//////
 	}
 	public void setToUserName(String toUserName) {
 		ToUserName = toUserName;
