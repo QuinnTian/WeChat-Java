@@ -121,5 +121,5 @@ public class CheckUitl {
 
   [1]: https://blog.csdn.net/LeoFitz
   [2]: https://www.jianshu.com/u/20ba9f30c422
-  [3]: https://img-blog.csdn.net/20180403222111364?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xlb0ZpdHo=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
+  [3]: https://github.com/QuinnTian/WeChat-Java/raw/master/image-md/%E4%BA%94%E4%B8%AA%E5%8F%82%E6%95%B0.png
   [4]: https://img-blog.csdn.net/20180403223244915?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xlb0ZpdHo=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
