@@ -29,7 +29,7 @@
 signature、timestamp、timestamp、nonce、echostr
 * **调用CheckUtil类里的checkSignature()方法进行验证**
 此方法写好后直接调用，涉及一些加密算法无需多看
-![enter description here][3]
+![1][3]
 ### 填写服务器配置
 * URL为内网映射工具得到的地址
 * token与代码中的一致
