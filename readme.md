@@ -34,8 +34,8 @@ signature、timestamp、timestamp、nonce、echostr
 * URL为内网映射工具得到的地址
 * token与代码中的一致
 ### 容易出现的问题
-* **doGet方法不要继承父类，否则会出现[405错误](https://blog.csdn.net/leofitz/article/details/79808950)**
-![enter description here][4]
+*  **doGet方法不要继承父类，否则会出现[405错误]**
+![2][4]
 
 
 代码部分
@@ -122,4 +122,4 @@ public class CheckUitl {
   [1]: https://blog.csdn.net/LeoFitz
   [2]: https://www.jianshu.com/u/20ba9f30c422
   [3]: https://github.com/QuinnTian/WeChat-Java/raw/master/image-md/%E4%BA%94%E4%B8%AA%E5%8F%82%E6%95%B0.png
-  [4]: https://img-blog.csdn.net/20180403223244915?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xlb0ZpdHo=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
+  [4]: https://github.com/QuinnTian/WeChat-Java/raw/master/image-md/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE.png
