@@ -1,3 +1,11 @@
+## Java微信公众号开发
+### 说明
+* 使用最基本的JavaWeb进行微信公众平台的后台开发
+* 后期将在基本的JavaWeb的基础上，添加与数据库对接
+* [CSDN博客][1]、[简书][2]、博客园同步更新
+### 目的
+* 通过这个小型项目来巩固JavaWeb基础
+* 构建自己的微信平台
 ## Java微信公众号开发（一）准备工作
 ### 需要的开发环境和开发工具
 
@@ -109,3 +117,7 @@ public class CheckUitl {
 }
 
 ```
+
+
+  [1]: https://blog.csdn.net/LeoFitz
+  [2]: https://www.jianshu.com/u/20ba9f30c422
