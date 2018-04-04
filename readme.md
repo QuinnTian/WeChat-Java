@@ -29,13 +29,13 @@
 signature、timestamp、timestamp、nonce、echostr
 * **调用CheckUtil类里的checkSignature()方法进行验证**
 此方法写好后直接调用，涉及一些加密算法无需多看
-![五个参数的作用](https://img-blog.csdn.net/20180403222111364?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xlb0ZpdHo=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![enter description here][3]
 ### 填写服务器配置
 * URL为内网映射工具得到的地址
 * token与代码中的一致
 ### 容易出现的问题
 * **doGet方法不要继承父类，否则会出现[405错误](https://blog.csdn.net/leofitz/article/details/79808950)**
-![这里写图片描述](https://img-blog.csdn.net/20180403223244915?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xlb0ZpdHo=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![enter description here][4]
 
 
 代码部分
@@ -121,3 +121,5 @@ public class CheckUitl {
 
   [1]: https://blog.csdn.net/LeoFitz
   [2]: https://www.jianshu.com/u/20ba9f30c422
+  [3]: https://img-blog.csdn.net/20180403222111364?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xlb0ZpdHo=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
+  [4]: https://img-blog.csdn.net/20180403223244915?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xlb0ZpdHo=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
