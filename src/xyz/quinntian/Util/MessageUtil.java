@@ -1,4 +1,4 @@
-package xyz.quinntian.Uitl;
+package xyz.quinntian.Util;
 
 import java.io.IOException;
 import java.io.InputStream;

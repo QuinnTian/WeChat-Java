@@ -1,9 +1,9 @@
-package xyz.quinntian.Uitl;
+package xyz.quinntian.Util;
 
 import java.security.MessageDigest;
 import java.util.Arrays;
 
-public class CheckUitl {
+public class CheckUtil {
 	private static final String token = "quinn";
 
 	public static boolean checkSignature(String signature, String timestamp, String nonce) {

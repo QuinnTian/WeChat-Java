@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.dom4j.DocumentException;
 
-import xyz.quinntian.Uitl.CheckUitl;
-import xyz.quinntian.Uitl.MessageUtil;
+import xyz.quinntian.Util.CheckUtil;
+import xyz.quinntian.Util.MessageUtil;
 import xyz.quinntian.po.TextMessage;
 
 public class WeixinServlet extends HttpServlet {
@@ -35,7 +35,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	String echostr = req.getParameter("echostr");
 	System.out.println("echostr:"+echostr);
 	PrintWriter out =resp.getWriter();
-	if (CheckUitl.checkSignature(signature, timestamp, nonce)) {
+	if (CheckUtil.checkSignature(signature, timestamp, nonce)) {
 		System.err.println("验证成功");
 		out.println(echostr);
 	}else {
