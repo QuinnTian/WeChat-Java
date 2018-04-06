@@ -17,7 +17,10 @@ import org.dom4j.io.SAXReader;
 
 import com.thoughtworks.xstream.XStream;
 
-
+import xyz.quinntian.po.Image;
+import xyz.quinntian.po.ImageMessage;
+import xyz.quinntian.po.Music;
+import xyz.quinntian.po.MusicMessage;
 import xyz.quinntian.po.NewMessage;
 import xyz.quinntian.po.News;
 import xyz.quinntian.po.TextMessage;
@@ -41,7 +44,7 @@ public class MessageUtil {
 	public static final String MESSAGE_CLICK = "CLICK";
 	public static final String MESSAGE_VIEW = "VIEW";
 	private static final String MESSAGE_NEWS = "news";
-	
+	public static final String MESSAGE_MUSIC = "music";
 	/**
 	 * 接收xml消息转到Map集合
 	 */
@@ -91,10 +94,13 @@ public class MessageUtil {
 	 */
 	public static String menuText(){
 		StringBuffer str = new StringBuffer();
-		str.append("欢迎您的关注，请按照菜单提示操作\n\n");
-		str.append("1.\n");
-		str.append("2.\n");
-		str.append("3.\n");
+		str.append("欢迎您的关注!\n");
+		str.append("WeChat-Java后台对接测试\n请按照菜单提示操作\n---------------------\n");
+		str.append("回复1.测试文本消息回复\n");
+		str.append("回复2.测试图文消息回复\n");
+		str.append("回复3.测试图片消息回复\n（有时间限制）\n");
+		str.append("回复4.测试音乐消息回复\n（有时间限制）\n");
+		str.append("回复？.调出主菜单\n");
 		return str.toString();
 		
 	}
@@ -144,4 +150,69 @@ public class MessageUtil {
 		message = newsMessageToXml(newsMessage);
 		return message;
 	}
+	/**
+	 * 图片消息转为xml
+	 * @param imageMessage
+	 * @return
+	 */
+	public static String imageMessageToXml(ImageMessage imageMessage){
+		XStream xstream = new XStream();
+		xstream.alias("xml", imageMessage.getClass());
+		return xstream.toXML(imageMessage);
+	}
+	/**
+	 * 组装图片消息
+	 * @param toUserName
+	 * @param fromUserName
+	 * @return
+	 */
+	public static String initImageMessage(String toUserName,String fromUserName){
+		String message = null;
+		Image image = new Image();
+		image.setMediaId("ENYQuY15C6Yp2e5HETVXctnZu9K1s4sJxNrnZ15fNvGsxfuhYSPYr4qxOMDoLsYT");
+		ImageMessage imageMessage = new ImageMessage();
+		imageMessage.setFromUserName(toUserName);
+		imageMessage.setToUserName(fromUserName);
+		imageMessage.setMsgType(MESSAGE_IMAGE);
+		imageMessage.setCreateTime(new Date().getTime());
+		imageMessage.setImage(image);
+		message = imageMessageToXml(imageMessage);
+		return message;
+	}
+	/**
+	 * 音乐消息转为xml
+	 * @param musicMessage
+	 * @return
+	 */
+	public static String musicMessageToXml(MusicMessage musicMessage){
+		XStream xstream = new XStream();
+		xstream.alias("xml", musicMessage.getClass());
+		return xstream.toXML(musicMessage);
+	}
+	
+	/**
+	 * 组装音乐消息
+	 * @param toUserName
+	 * @param fromUserName
+	 * @return
+	 */
+	public static String initMusicMessage(String toUserName,String fromUserName){
+		String message = null;
+		Music music = new Music();
+		music.setThumbMediaId("DM_esBaLHmBNgsAah3JBtLaA2ZNUAAixE6HhAwSPmXciQI6AEmHEHKQH0wUWTPkp");
+		music.setTitle("骄傲的少年");
+		music.setDescription("骄傲的少年");
+		music.setMusicUrl("http://6fdsev.natappfree.cc/WeChat-Java/resource/Horner.mp3");
+		music.setHQMusicUrl("http://6fdsev.natappfree.cc/WeChat-Java/resource/Horner.mp3");
+		
+		MusicMessage musicMessage = new MusicMessage();
+		musicMessage.setFromUserName(toUserName);
+		musicMessage.setToUserName(fromUserName);
+		musicMessage.setMsgType(MESSAGE_MUSIC);
+		musicMessage.setCreateTime(new Date().getTime());
+		musicMessage.setMusic(music);
+		message = musicMessageToXml(musicMessage);
+		return message;
+	}
+	
 }

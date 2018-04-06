@@ -70,12 +70,12 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.firstMenu());	
 				}else if ("2".equals(content)) {
 					message =MessageUtil.initNewsMessage(toUserName, fromUserName);
-				}else if ("2".equals(content)) {
-					
-				}else if ("2".equals(content)) {
-					
+				}else if ("3".equals(content)) {
+					message =MessageUtil.initImageMessage(toUserName, fromUserName);
+				}else if ("4".equals(content)) {
+					message =MessageUtil.initMusicMessage(toUserName, fromUserName);
 				}else if ("?".equals(content)) {
-					
+					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());	
 				}else {
 					message="无法识别";
 				}
